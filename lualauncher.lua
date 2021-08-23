@@ -162,6 +162,8 @@ local function MOMCWD_fake_script() -- LuahubLauncher.launchmanager
 			loadstring(game:HttpGet(("https://raw.githubusercontent.com/RobloxExploitings/luahub/main/NinjaLegends.lua"), true))()
 		elseif game.PlaceId == 5852812686 then
 			loadstring(game:HttpGet(("https://raw.githubusercontent.com/RobloxExploitings/luahub/main/CandyClickingSim.lua"), true))()
+		elseif game.PlaceId == 155615604 then
+			loadstring(game:HttpGet(("https://raw.githubusercontent.com/RobloxExploitings/luahub/main/PrisonLife.lua"), true))()
 		else
 			launchButton.Text = "This game isn't supported by LuaHub. For supported games, please join our discord that has been copied to your clipboard."
 			setclipboard("https://discord.gg/P3RjmbKN")
