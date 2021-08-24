@@ -12,7 +12,7 @@ local launchbutton = Instance.new("TextButton")
 local UICorner_2 = Instance.new("UICorner")
 local exitbutton = Instance.new("TextButton")
 local UICorner_3 = Instance.new("UICorner")
-local credits = Instance.new("TextLabel")
+local dizzybutton = Instance.new("TextButton")
 local UICorner_4 = Instance.new("UICorner")
 
 --Properties:
@@ -79,23 +79,24 @@ exitbutton.TextXAlignment = Enum.TextXAlignment.Left
 
 UICorner_3.Parent = exitbutton
 
-credits.Name = "credits"
-credits.Parent = main
-credits.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
-credits.Position = UDim2.new(0.0191693306, 0, 0.702127635, 0)
-credits.Size = UDim2.new(0, 305, 0, 29)
-credits.Font = Enum.Font.SourceSans
-credits.Text = "This script was made by Lua."
-credits.TextColor3 = Color3.fromRGB(255, 255, 255)
-credits.TextSize = 16.000
-credits.TextWrapped = true
-credits.TextXAlignment = Enum.TextXAlignment.Left
+dizzybutton.Name = "dizzybutton"
+dizzybutton.Parent = main
+dizzybutton.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+dizzybutton.BorderSizePixel = 0
+dizzybutton.Position = UDim2.new(0.0222148299, 0, 0.71783036, 0)
+dizzybutton.Size = UDim2.new(0, 305, 0, 29)
+dizzybutton.Font = Enum.Font.SourceSansBold
+dizzybutton.Text = "Join our discord for the list of supported games"
+dizzybutton.TextColor3 = Color3.fromRGB(255, 255, 255)
+dizzybutton.TextSize = 16.000
+dizzybutton.TextWrapped = true
+dizzybutton.TextXAlignment = Enum.TextXAlignment.Left
 
-UICorner_4.Parent = credits
+UICorner_4.Parent = dizzybutton
 
 -- Scripts:
 
-local function CYVEKNI_fake_script() -- main.Dragify 
+local function YBLYWJT_fake_script() -- main.Dragify 
 	local script = Instance.new('LocalScript', main)
 
 	local UIS = game:GetService("UserInputService")
@@ -141,12 +142,13 @@ local function CYVEKNI_fake_script() -- main.Dragify
 	
 	dragify(script.Parent)
 end
-coroutine.wrap(CYVEKNI_fake_script)()
-local function MOMCWD_fake_script() -- LuahubLauncher.launchmanager 
+coroutine.wrap(YBLYWJT_fake_script)()
+local function DSKTR_fake_script() -- LuahubLauncher.launchmanager 
 	local script = Instance.new('LocalScript', LuahubLauncher)
 
 	local launchButton = script.Parent.main.launchbutton
 	local exitButton = script.Parent.main.exitbutton
+	local dizzyButton = script.Parent.main.dizzybutton
 	-- elseif game.PlaceId == 1 then
 	
 	function setupLauncher()
@@ -182,5 +184,10 @@ local function MOMCWD_fake_script() -- LuahubLauncher.launchmanager
 	launchButton.MouseButton1Click:Connect(function()
 		launchScript()
 	end)
+	
+	dizzyButton.MouseButton1Click:Connect(function()
+		setclipboard("https://discord.gg/P3RjmbKN")
+		dizzyButton.Text = "DIscord has been copied to clipboard."
+	end)
 end
-coroutine.wrap(MOMCWD_fake_script)()
+coroutine.wrap(DSKTR_fake_script)()
